@@ -20,8 +20,8 @@ namespace MovieList.Models
         public int? Rating { get; set; }
 
         [Required(ErrorMessage = "Please enter a genre.")]
-        public string GenreId { get; set; }
-        public Genre Genre { get; set; }
+        public string GenreId { get; set; }     //added foreign key property
+        public Genre Genre { get; set; }        //added genre property
 
         public string Slug =>
             Name?.Replace(' ', '-').ToLower() + '-' + Year?.ToString();

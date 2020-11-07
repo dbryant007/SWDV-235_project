@@ -1,6 +1,6 @@
 ﻿@model Movie
 @{
-    string title = ViewBag.Action + " Movie";
+    string title = ViewBag.Action + " Movie";       //added viewbag info
     ViewBag.Title = title;
 }
 
@@ -23,7 +23,7 @@
         <label asp-for="GenreId">Genre</label>
         <select asp-for="GenreId" class="form-control">
             <option value="">select a genre</option>
-            @foreach (Genre g in ViewBag.Genres)
+            @foreach (Genre g in ViewBag.Genres)                //added Loop to add genre
             {
                 <option value="@g.GenreId">@g.Name</option>
             }

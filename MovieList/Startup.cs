@@ -33,7 +33,7 @@ namespace MovieList
 
             services.AddDbContext<MovieContext>(options =>
                options.UseSqlServer(
-               Configuration.GetConnectionString("MovieContext")));
+               Configuration.GetConnectionString("MovieContext")));                             //Added MovieContext to GetConnectionString
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

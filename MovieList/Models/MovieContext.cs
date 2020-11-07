@@ -10,9 +10,9 @@ namespace MovieList.Models
 
         public DbSet<Movie> Movies { get; set; }
 
-        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Genre> Genres { get; set; }    //added Genre property
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)      //added OnModelCreating method
         {
             base.OnModelCreating(modelBuilder);
 

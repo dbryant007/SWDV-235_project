@@ -13,7 +13,7 @@ namespace MovieList.Controllers
 {
     public class HomeController : Controller
     {
-        private MovieContext context { get; set; }
+        private MovieContext context { get; set; }                          //added property
 
         public HomeController(MovieContext ctx)
         {
@@ -22,7 +22,7 @@ namespace MovieList.Controllers
 
         public IActionResult Index()
         {
-            var movies = context.Movies.Include(m => m.Genre).OrderBy(m => m.Name).ToList();
+            var movies = context.Movies.Include(m => m.Genre).OrderBy(m => m.Name).ToList();    //added INclude and OrderBy
             return View(movies);
         }
     }
